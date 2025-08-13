@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Send csv</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send csv</title>
+    <link rel="stylesheet" href="./src/styles/output.css">
+
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li class="cursor-pointer p-1 m-2 border-2 w-30"><a href="./index.html">CrudClients</a></li>
+          <li class="cursor-pointer p-1 m-2 border-2 w-30"><a href="./send_csv.html">Send CSV</a></li>
+        </ul>
+      </nav>
+    </header>
+     <main class="h-max flex flex-col justify-center">
+            <form id="form-csv" class="m-3">
+                <div>
+                   <input id="inputFile" type="file"  name="file" accept="csv" class="cursor-pointer">
+                <div>
+                    <select name="entity" class="rounded-lg border-2 p-2 m-3">
+                        <option value="" default>Select a table</option>
+                        <option value="clients">Clients</option>
+                    </select>
+                </div>
+                <button type="submit" class="px-2 bg-green-400 rounded-xl cursor-pointer m-3 hover:bg-green-500">
+                Send</button>
+            </form>
+        </main>
+    <script type="module" src="./src/js/load_csv.js"></script>
+</body>
+</html>

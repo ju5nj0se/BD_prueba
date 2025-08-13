@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Crud Clients</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/output.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="cursor-pointer p-1 m-2 border-2 w-30"><a href="./index.html">CrudClients</a></li>
+          <li class="cursor-pointer p-1 m-2 border-2 w-30"><a href="./send_csv.html">Send CSV</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="h-2/3 flex flex-col justify-center">
+          <div>
+            <button id="addClient" class="cursor-pointer m-2 border-2 rounded-xl bg-green-400 h-auto w-30 hover:scale-103 transition-transform">Add client</button>         
+          </div>
+            <p id="msg"></p>
+            <table id="tableClients">
+                <tr class="border-2">
+                    <th class="p-2">ID</th>
+                    <th class="p-2">Name</th>
+                    <th class="p-2">Identification</th>
+                    <th class="p-2">Address</th>
+                    <th class="p-2">Phone</th>
+                    <th class="p-2">Email</th>
+                    <th class="p-2">Update</th>
+                    <th class="p-2">Delete</th>
+                </tr>
+            </table> 
+      </main>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

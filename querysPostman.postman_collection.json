@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "084817f2-8752-4503-9a5c-191dbb3981bf",
+		"name": "querysPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45845165"
+	},
+	"item": [
+		{
+			"name": "totalPayClients",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "invoicesPending",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "transactionsNequi",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "transactionsDaviplata",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

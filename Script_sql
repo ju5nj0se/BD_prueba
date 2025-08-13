@@ -1,0 +1,51 @@
+create database pd_juan_hernandez_berners_lee;
+
+use pd_juan_hernandez_berners_lee;
+
+create table clients(
+id serial primary key,
+name varchar(200),
+identification bigint unique,
+address VARCHAR(200),
+phone BIGINT unique,
+email VARCHAR(200) unique
+);
+insert into clients(id, name) values(150, 'Sin cliente');
+
+create type enum_state_pay as enum('Pendiente', 'Pagada');
+
+drop type enum_st
+
+create table invoices(
+id varchar(100) primary key,
+client_id int default 150,
+date_invoice date,
+amount bigint,
+amount_payed bigint,
+state enum_state_pay,
+foreign key(client_id) references clients(id)
+on delete set default
+on update cascade
+);
+
+create type enum_state_transaction as enum('Pendiente', 'Fallida', 'Completada');
+create type enum_type_transaction as enum('Pago de Factura', 'Otro');
+create type enum_bank as enum('Nequi', 'Daviplata', 'Otro');
+
+create table transactions(
+id varchar(100) primary key,
+invoice_id varchar(100),
+client_id int default 150,
+date_time timestamp default current_timestamp,
+amount_transaction bigint,
+state enum_state_transaction,
+type_transaction enum_type_transaction,
+platform_bank enum_bank,
+foreign key(invoice_id) references invoices(id)
+on delete cascade
+on update cascade,
+foreign key(client_id) references clients(id)
+on delete cascade
+on update cascade
+);
+
