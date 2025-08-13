@@ -1,0 +1,20 @@
+### Explain of the normalize of the DB
+
+# First
+
+Atomicity of data:
+Can't have been groups list or groups in a one celda
+
+Eliminate of the repetides groups of a rows:
+All rows have been unique and dont have invalid caracters, for example a phone
+
+
+# Second
+For the second rule have been for the first and rule. 
+
+Delete parcials dependencies:
+That its when another atributes depend of the one atribute what dont is parcial dependencie. That happen int table because all atributes are in a one table so have divide the tables (clients, invoices, transactions);
+
+# Third
+Delete dependencies transitives
+That happen when a atribute depende of another atribute that dont is primary key	
